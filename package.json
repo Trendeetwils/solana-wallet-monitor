@@ -1,0 +1,32 @@
+{
+  "name": "solana-wallet-monitor",
+  "version": "1.0.0",
+  "description": "Telegram bot for monitoring Solana wallet transactions",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "NODE_OPTIONS='--loader ts-node/esm' nodemon src/index.ts",
+    "dev:simple": "ts-node src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:studio": "prisma studio"
+  },
+  "keywords": ["telegram", "solana", "blockchain", "monitor"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^5.9.0",
+    "@solana/web3.js": "^1.87.6",
+    "dotenv": "^16.3.1",
+    "telegraf": "^4.15.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "nodemon": "^3.0.2",
+    "prisma": "^5.9.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
