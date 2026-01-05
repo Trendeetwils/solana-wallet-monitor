@@ -35,7 +35,7 @@ export function getSettingsKeyboard() {
       Markup.button.callback('⏱ Poll Interval', 'setting_interval'),
     ],
     [
-      Markup.button.callback('« Back to Menu', 'back_to_menu'),
+      Markup.button.callback('◀️ Back to Menu', 'back_to_menu'),
     ],
   ]);
 }
@@ -74,7 +74,7 @@ export function getPollIntervalKeyboard() {
       Markup.button.callback('2 minutes', 'interval_120000'),
     ],
     [
-      Markup.button.callback('« Back', 'settings'),
+      Markup.button.callback('◀️ Back', 'settings'),
     ],
   ]);
 }
@@ -84,6 +84,6 @@ export function getPollIntervalKeyboard() {
  */
 export function getBackToMenuKeyboard() {
   return Markup.inlineKeyboard([
-    [Markup.button.callback('« Back to Menu', 'back_to_menu')],
+    [Markup.button.callback('◀️ Back to Menu', 'back_to_menu')],
   ]);
 }
