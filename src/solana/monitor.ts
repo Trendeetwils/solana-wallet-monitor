@@ -257,7 +257,7 @@ export class SolanaMonitor {
       const message = formatTransactionMessage(txInfo);
       await this.bot.telegram.sendMessage(telegramId, message, {
         parse_mode: 'Markdown',
-        disable_web_page_preview: true,
+        link_preview_options: { is_disabled: true },
       });
     } catch (error) {
       console.error('Error handling transaction:', error);

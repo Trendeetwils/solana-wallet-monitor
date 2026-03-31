@@ -9,18 +9,28 @@ export interface BotContext extends Context {
 export interface TransactionNotification {
   signature: string;
   timestamp: number;
-  type: 'incoming' | 'outgoing';
+  type?: string;
+
+  transactionType?: 'sol' | 'spl';
+
   solChange?: number;
+
   tokenTransfers?: TokenTransfer[];
-  explorerLink: string;
+
+  // NEW
+  explorerLink?: string;
 }
 
 export interface TokenTransfer {
   mint: string;
   amount: number;
   decimals: number;
+
+  name?: string;
   symbol?: string;
-  type: 'incoming' | 'outgoing';
+
+  // NEW
+  type?: 'incoming' | 'outgoing';
 }
 
 export interface MonitoringStatus {
